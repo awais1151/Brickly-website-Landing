@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // using local storage add email 
+        document.addEventListener("DOMContentLoaded", function () {
+            const emailInput = document.getElementById("email");
+            const saveButton = document.getElementById("saveButton");
+            const storedEmail = localStorage.getItem("userEmail");
+            if (storedEmail) {
+                emailInput.value = storedEmail;
+            }
+
+            saveButton.addEventListener("click", function () {
+                const email = emailInput.value;
+
+
+                if (!validateEmail(email)) {
+                    alert("Please enter a valid email address.");
+                    return;
+                }
+
+                localStorage.setItem("userEmail", email);
+
+                alert("Email saved to localStorage: " + email);
+            });
+
+            function validateEmail(email) {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailPattern.test(email);
+            }
+        });
+
+        
+    </script>
+
+    <title>Brickclay</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid bborder">
+
+            <div class=" col-0.5  bordres">
+                <a class="navbar-brand" href="#" style="color: white;">
+                    Creative Logo
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse  col-7   div2">
+
+                <ul class="navbar-nav fsizes ">
+                    <li class="nav-item">
+                        <a class="nav-link  " href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu" style="background: #707070;">
+                            <li>
+                                <a class="dropdown-item linksheader" href="#">Link 1</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item  linksheader" href="#">Link 2</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item  linksheader" href="#">Link 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Case Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a class="nav-link  " href="#">Content</a>
+                    </li>
+
+                </ul>
+                <div class=" col-2 div3  ">
+
+                    <ul class="navbar-nav" style="gap: 15px;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> <i class="bi bi-instagram fsize"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> <i class="bi bi-linkedin fsize"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> <i class="bi bi-twitter fsize"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> <i class="bi bi-facebook fsize"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="div4 col-1">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> <i class="bi bi-search fsize"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="div5 col-2 ">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <h4>Need help?</h4>
+                            <h4>+92 666 888 0000</h4>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+    </nav>
+    <div class="MainDiv">
+        <div class="heading">
+            <h6>WELCOME TO CODESHAPER</h6>
+        </div>
+        <div class="secdiv">
+            <h1>CONSULTING</h1>
+            <h1>FOR EVERY</h1>
+            <h1>BUSINESS</h1>
+        </div>
+        <button class="button button5" type="button">DISCOVER MORE</button>
+    </div>
+    <div class="secpage">
+        <div class="part1">
+            <h1> Real World Experience</h1>
+            <h6> The best business consulting firm you can count on !</h6>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="carouselExample" class="carousel slide">
+                         
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="single-box">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"> WEALTH </h4>
+                                                    <h4 class="card-title"> MANAGEMENT </h4>
+                                                    <div> <img src="bucket.png" alt="icons"></div>
+                                                    <a href="#">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="single-box">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"> WEALTH </h4>
+                                                    <h4 class="card-title"> MANAGEMENT </h4>
+                                                    <div> <img src="bucket.png" alt="icons"></div>
+                                                    <a href="#">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="single-box">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"> WEALTH </h4>
+                                                    <h4 class="card-title"> MANAGEMENT </h4>
+                                                    <div> <img src="bucket.png" alt="icons"></div>
+                                                    <a href="#">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <div class="carousel-item  ">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="single-box">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"> WEALTH </h4>
+                                                    <h4 class="card-title"> MANAGEMENT </h4>
+                                                    <div> <img src="bucket.png" alt="icons"></div>
+                                                    <a href="#">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="single-box">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"> WEALTH </h4>
+                                                    <h4 class="card-title"> MANAGEMENT </h4>
+                                                    <div> <img src="bucket.png" alt="icons"></div>
+                                                    <a href="#">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="single-box">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"> WEALTH </h4>
+                                                    <h4 class="card-title"> MANAGEMENT </h4>
+                                                    <div> <img src="bucket.png" alt="icons"></div>
+                                                    <a href="#">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page">
+            <p>MEET THE PARTNERS</p>
+        </div>
+        <div class="flexses">
+
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="prev" style=" background: linear-gradient(0deg, rgba(60, 114, 252, 0.3), rgba(60, 114, 252, 0.3)),
+                linear-gradient(0deg, rgba(77, 123, 242, 0.17), rgba(77, 123, 242, 0.17));
+                border: 1px solid #3C72FC4D;
+                height: 47px; width: 47px;  ">
+                <span><i class="bi bi-arrow-left-short" style="color: #3C72FC; font-size: 30px; 
+                         "></i>
+                </span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <!-- <i class="bi bi-arrow-left-short"
+                style="color: #3C72FC;border: 1px solid #3C72FC4D;font-size: 30px;margin-left:5px;"></i> -->
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="next"style="background: linear-gradient(0deg, rgba(60, 114, 252, 0.3), rgba(60, 114, 252, 0.3)),
+            linear-gradient(0deg, rgba(77, 123, 242, 0.17), rgba(77, 123, 242, 0.17));
+            height: 47px; width: 47px;border: 1px solid #3C72FC4D ;   ">
+                <span><i class="bi bi-arrow-right-short" style="color: #3C72FC; font-size: 30px;  "></i></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <!-- 
+            <i class="bi bi-arrow-right-short"
+                style="color: #3C72FC; font-size: 30px;border: 1px solid #3C72FC4D;margin-left:94%;"></i> -->
+        </div>
+
+        <div class="Parent">
+            <div class="child1 ">
+                <link href="#"> <i class="bi bi-play-fill" style="color: #FFFFFF; background: #3C72FC; border: 40px solid #3C72FC;font-size: 24px; 
+            "></i></link>
+            </div>
+            <div class="child2">
+                <h3>WE'RE LEADING IN</h3>
+                <h3>THE MARKET</h3>
+                <text>Because the standard lorem ipsum text is a chopped-up version<br>Because the standard lorem
+                    ipsum text
+                    is a chopped-up version<br> of an actual Latin text, you can't truly translate it. </text>
+                <br>
+                <div class="ok">
+                    <text> We have 35+ years of Experience.we offer<br> marketing and consulting services</text>
+                </div><br>
+                <div class="progressbar">
+                    <div class="progress" style="width: 450px; ">
+                        <div class="progress-bar" style="width:370px;border-radius: 4px; ">88%</div>
+                    </div>
+                    <h5>Consulting</h5><br>
+                    <div class="progress" style="width: 450px; ">
+                        <div class="progress-bar" style="width: 300px; border-radius: 4px;">68%</div>
+                    </div>
+                    <h5>Advices</h5>
+                </div>
+
+                <div class="phones">
+                    <div class="phone"> <i class="bi bi-telephone  "
+                            style="border: 10px solid #afb6c9;size:10px;color:blue;background-color:#afb6c9    ;"></i>
+                    </div>
+                    <div> <text style="padding-bottom: 550px;"> Have any question?Give us call<br>+92 315 777
+                            867</text>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <div class="fourpage">
+            <div class="sections1">
+                <div class="divs2">
+                    <div class="card divs3">
+                        <div class="card-body  divs4">
+                            <div class="card01">
+                                <h6>01</h6>
+                            </div>
+                            <div>
+                                <h4 style="color: #0F0D1D;font-family: Jost;
+                font-size: 25px;
+                font-weight: 700;
+                ">Get Professional Advice</h4>
+                                <Text style="color: #726F84;font-size: 16px;">There are many variations of available
+                                    but the
+                                    <br>majority have suffered alteration.</Text>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rightdivs ">
+                    <div class="card divs3">
+                        <div class="card-body  divs4">
+                            <div class="card01">
+                                <h6>02</h6>
+                            </div>
+                            <div>
+                                <h4 style="color: #0F0D1D;font-family: Jost;
+                font-size: 25px;
+                font-weight: 700;
+                ">Trusted&Professional</h4>
+                                <Text style="color: #726F84;font-size: 16px;">There are many variations of available
+                                    but the
+                                    <br>majority have suffered alteration.</Text>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="case">
+                <h2>NEW CASE STUDIES</h2>
+                <text>We help our renew the business</text>
+            </div><br>
+            <div class="mainconatiner">
+                <div class="card  thumb1">
+                    <div class="card-body thumb2">
+                        <i class="bi bi-car-front-fill" style="font-size: 60px;"></i>
+                        <h6>Thought leadership</h6>
+                        <h2>Businesses<br> Growth</h2>
+                    </div>
+                </div>
+                <div class="card  thumb1">
+                    <div class="card-body thumb2">
+                        <i class="bi bi-car-front-fill" style="font-size: 60px;"></i>
+                        <h6>Thought leadership</h6>
+                        <h2>Businesses<br> Growth</h2>
+                    </div>
+                </div>
+                <div class="card  thumb1">
+                    <div class="card-body thumb2">
+                        <div class="layers">
+                            <i class="bi bi-car-front-fill" style="font-size: 60px;"></i>
+                            <h6>Thought leadership</h6>
+                            <h2>Businesses<br> Growth</h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card thumnail ">
+                <div class="card-body thumnail1">
+                    <h1>
+                        MISSION IS TO PROTECT<br>
+                        YOUR BUSINESSES &
+                        <br>MUCH MORE<br>
+
+
+                    </h1>
+                    <button class="button button10" type="button">DISCOVER MORE</button>
+                </div>
+            </div>
+            <div class="sixthpage">
+                <div class="question">
+                    <h3 style="color: #0F0D1D;font-family: Jost;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 60px;
+            letter-spacing: -0.01599999889731407px;
+            text-align: center;
+            
+            ">QUESTION ANSWERS</h3>
+                    <text style="color: #8F8DA0;font-size: 18px;
+            ">we help our clients renew their business</text>
+                    <div class="bigdiv">
+                        <div class="leftdiv">
+                            <div class="btn-group  ">
+                                <button type="button" data-bs-toggle="dropdown"
+                                    style="height: 97px;width: 470px;border: none;color: #0F0D1D;">
+                                    <text style="color: #3C72FC;font-size: 18px; 
+                                ">1.</text> THINK AHEAD AND BOOST YOUR BUSINESS? <text
+                                        style="padding-left: 90px; color: #3C72FC; font-size: 25px;">+</text>
+                                </button>
+                                <ul class="dropdown-menu   " style="height: 120px;width: 470px;border: none;box-shadow: 0px 0px 30px 0px #00001E0F;
+                            ">
+                                    <li>There are many variations of passages the majority have suffered alteration
+                                        in some
+                                        fo injected humour, or randomised words believable.</li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="height: 97px;width: 470px;border: none;color: #0F0D1D;text-align: start;">
+                                    <text style="color: #3C72FC;font-size: 18px;
+                                ">2.</text> HOW CONSULTANCY EXPERTS WORK?<text
+                                        style="padding-left: 145px; color: #3C72FC; font-size: 25px;text-align: end;">+</text>
+                                </button>
+                                <ul class="dropdown-menu  "
+                                    style="height: 120px;width: 470px;border: none;box-shadow: 0px 0px 30px 0px #00001E0F;">
+                                    <li>There are many variations of passages the majority have suffered alteration
+                                        in some
+                                        fo injected humour, or randomised words believable.</li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="height: 97px;width: 470px;border: none;color: #0F0D1D; text-align: start;">
+                                    <text style="color: #3C72FC;font-size: 18px;
+                                ">3.</text>WHAT IS THE BEST ADVICE FOR GROWTH?<text
+                                        style="padding-left: 120px; color: #3C72FC; font-size: 25px;">+</text>
+                                </button>
+                                <ul class="dropdown-menu  "
+                                    style="height: 120px;width: 470px;border: none;box-shadow: 0px 0px 30px 0px #00001E0F;">
+                                    <li>There are many variations of passages the majority have suffered alteration
+                                        in some
+                                        fo injected humour, or randomised words believable.</li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="height: 97px;width: 470px;border: none;color: #0F0D1D;text-align: start;">
+                                    <text style="color: #3C72FC;font-size: 18px;
+                                ">4.</text>HOW TO IMPROVE YOUR BUSINESS? <text
+                                        style="padding-left: 160px; color: #3C72FC; font-size: 25px;">+</text>
+                                </button>
+                                <ul class="dropdown-menu "
+                                    style="height: 120px;width: 470px;border: none;box-shadow: 0px 0px 30px 0px #00001E0F;">
+                                    <li>There are many variations of passages the majority have suffered alteration
+                                        in some
+                                        fo injected humour, or randomised words believable.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="right-div">
+                            <div class="tickicons">
+                                <i class="bi bi-check2" style="color: #2D95FD; font-size: 22px;
+                            "></i>&nbsp;&nbsp;<text>Nsectetur cing elit.</text><br>
+                                <i class="bi bi-check2" style="color: #2D95FD; font-size: 22px;
+                            "></i>&nbsp;&nbsp;<text>Suspe ndisse suscipit sagittis leo.</text><br>
+                                <i class="bi bi-check2" style="color: #2D95FD; font-size: 22px;
+                            "></i>&nbsp;&nbsp;<text>Entum estibulum dignissim posuere.</text><br>
+                                <i class="bi bi-check2" style="color: #2D95FD; font-size: 22px;
+                            "></i>&nbsp;&nbsp;<text>If you are going to use a passage</text><br>
+                                <i class="bi bi-check2" style="color: #2D95FD; font-size: 22px;
+                            "></i>&nbsp;&nbsp;<text>If you are going to use a passage test data.</text>
+                            </div>
+                            <div class="years">
+                                <h2 style="font-size: 58px;font-family: jost;font-weight: 700;">30</h2>
+                                <h5>Years of</h5>
+                                <h5>Experience</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sevenpage">
+                <div class="buscard">
+                    <div class="bodycard">
+                        <img src="brain.png " alt="#">
+                        <h2>400</h2>
+                        <h6>Consulting Solutions</h6>
+                    </div>
+                    <hr style="border: 1px solid white;height: 150px;">
+                    <div class="bodycard">
+                        <img src="brain.png " alt="#">
+                        <h2>400</h2>
+                        <h6>Consulting Solutions</h6>
+                    </div>
+                    <hr style="border: 1px solid white;height: 150px;">
+                    <div class="bodycard">
+                        <img src="brain.png " alt="#">
+                        <h2>400</h2>
+                        <h6>Consulting Solutions</h6>
+                    </div>
+                    <hr style="border: 1px solid white;height: 150px;">
+                    <div class="bodycard">
+                        <img src="brain.png " alt="#">
+                        <h2>400</h2>
+                        <h6>Consulting Solutions</h6>
+                    </div>
+
+                </div>
+                <div class="verticalcard">
+                    <div class="verticalbody">
+                        <h3> Business Growth</h3>
+                    </div>
+                    <div class="verticalbody1">
+                        <h3> Business Growth</h3>
+                    </div>
+                    <div class="verticalbody1">
+                        <h3> Business Growth</h3>
+                    </div>
+
+                </div>
+                <div class="linediv">
+                    <div class="setdirection">
+                        <div class="ratesdirection">
+                            <div class="Rates">
+                                <div class="tickcircle">
+                                    <i class="bi bi-check2-circle"></i>
+                                </div>
+                                <div class="bottomdiv">
+                                    <h3>Heighest Success Rates</h3>
+                                    <text>
+                                        Lorem Ipsum nibh vel velit auctor aliqu.<br>
+                                        Aenean sollic tudin, lorem is simply <br>
+                                        free text quis bibendum.
+                                    </text>
+                                </div>
+                            </div>
+
+                            <div class="Rates">
+                                <div class="tickcircle">
+                                    <i class="bi bi-check2-circle"></i>
+                                </div>
+                                <div class="bottomdiv">
+                                    <h3>Heighest Success Rates</h3>
+                                    <text>
+                                        Lorem Ipsum nibh vel velit auctor aliqu.<br>
+                                        Aenean sollic tudin, lorem is simply <br>
+                                        free text quis bibendum.
+                                    </text>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="horizontalline">
+                            <hr>
+                        </div>
+
+
+                    </div>
+
+                    <div class="textdiv">
+                        <text>
+                            There are many variations of passages of lorem ipsum available,<br>
+                            but the majority have suffered alteration in some form injected<br>
+                            humour or randomised words which don't look believable.
+                        </text><br><br><br>
+                        <div>
+                            <img src="line.png" alt="#01">
+                            <text> if you are use to going a passage</text>
+                        </div>
+                        <div>
+                            <img src="line.png" alt="#01">
+                            <text> Lorem Ipsum you need to be sure</text>
+                        </div>
+                        <div>
+                            <img src="line.png" alt="#01">
+                            <text>There isn't anything embarrassing</text>
+                        </div>
+                        <div>
+                            <img src="line.png" alt="#01">
+                            <text>Hidden in the middle of text</text>
+                        </div>
+                    </div>
+                </div>
+                <div class="eightpge">
+                    <div class="fulldiv">
+                        <div class="level1">
+                            <h4 style="color: #FFFFFF;font-family: Jost;
+                    font-size: 25px;
+                    font-weight: 600;
+                     
+                    ">Creative Logo</h4><br><br>
+                            <text>Welcome to our consultancy agency. Lore ipsum simply <br>
+                                text amet cing elit simply text amet cing elit.</text>
+                            <hr style="width: 500px;">
+                            <img src="phone.png" alt="#">
+                            <text>+92 315 733 2944</text><br><br>
+                            <img src="email.png" alt="#">
+                            <text>hasif02@brickclay.com</text><br><br>
+                            <img src="map.png" alt="#">
+                            <text>66 Broklyn Street New York, USA</text>
+                        </div>
+                        <div class="level2">
+                            <h4 style="padding-left: 20px;color: #FFFFFF;font-family: Jost;
+                    font-size: 25px;
+                    font-weight: 600;
+                     
+                    ">Explore</h4><br><br>
+                            <div class="footer">
+                                <div>
+                                    <text>About</text><br><br>
+                                    <text>Meet Our Team</text><br><br>
+                                    <text>Case Studies</text><br><br>
+                                    <text>Latest News</text><br><br>
+                                    <text>Contact</text>
+                                </div>
+                                <div style="padding-bottom: 50px;">
+                                    <text>Support</text><br><br>
+                                    <text>Term of use</text><br><br>
+                                    <text>Privacy&policy</text><br><br>
+                                    <text>Help</text>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="level3">
+                            <h4 style="color: #FFFFFF;font-size: 25px;font-weight: 600;font-family: jost;">
+                                NEWSLETTER</h4>
+                            <br><br>
+                            <div class="  emailcard">
+                                <div class="emailbody">
+                                    <h5>Subscribe for latest articles and resources</h5><br>
+                                    <div class="subdib">
+                                        <input type="email" id="email" name="email" placeholder="Email Address"
+                                            pattern="abc@gamil.com">
+                                        <button type="submit" class="btnregister" id="saveButton">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footerlast">
+                        <hr style="width: 1250px; border: 1px solid #FFFFFF29; "><br>
+                        <div class="socialapps">
+                            <div class="apps">
+                                <text style="color: #8F8DA0; font-size: 16px;font-family: jost;
+                    font-weight: 500; text-align: start;">© Copyright 2022 by Brickclay </text>
+                            </div>
+
+                            <div class="social">
+                                <div> <i class="bi bi-instagram"></i></div>
+                                <div><i class="bi bi-linkedin"></i></div>
+                                <div> <i class="bi bi-twitter"></i></div>
+                                <div> <i class="bi bi-facebook"></i></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+</body>
+
+</html>
